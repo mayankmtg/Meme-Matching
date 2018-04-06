@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+tools:context=".ProfileActivity" android:background="@drawable/bgimage">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/topPanel2">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/back"
+                android:src="@drawable/back"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/settings"
+                android:layout_alignParentTop="true"
+                android:layout_width="35dp"
+                android:layout_margin="5dp"
+                android:layout_centerVertical="true"
+                android:layout_height="35dp"
+                android:src="@drawable/sett_w"
+                android:layout_alignParentRight="true"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/mainProfile"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/topPanel2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/profile_image"
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:src="@drawable/profile_pic"
+                    app:civ_border_color="#ffffff"
+                    app:civ_border_width="2dp" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/personName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="30dp"
+                    android:textSize="20dp"
+                    android:text="Varnit Jain" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="30dp">
+
+                <TextView
+                    android:id="@+id/line1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:textSize="15sp"
+                    android:text="This is a small line about me" />
+
+                <TextView
+                    android:layout_below="@+id/line1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="I love memes and stuff"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                >
+
+                <TextView
+                    android:id="@+id/category1"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:text="Science"
+                    android:textSize="20dp"
+                    android:textAlignment="center"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/custom_border"/>
+
+                <TextView
+                    android:id="@+id/category2"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Games"
+                    android:textSize="20dp"
+                    android:textAlignment="center"
+                    android:background="@drawable/custom_border"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/category1"/>
+
+                <TextView
+                    android:id="@+id/category3"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Politics"
+                    android:textSize="20dp"
+                    android:textAlignment="center"
+                    android:background="@drawable/custom_border"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/category2"/>
+
+                <TextView
+                    android:id="@+id/category4"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Sports"
+                    android:textSize="20dp"
+                    android:textAlignment="center"
+                    android:background="@drawable/custom_border"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/category3"/>
+
+                <TextView
+                    android:id="@+id/category5"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Food"
+                    android:textSize="20dp"
+                    android:textAlignment="center"
+                    android:background="@drawable/custom_border"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/category4"/>
+
+                <TextView
+                    android:id="@+id/category6"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="TV"
+                    android:textSize="20dp"
+                    android:textAlignment="center"
+                    android:background="@drawable/custom_border"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/category5"/>
+
+                <TextView
+                    android:id="@+id/category7"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Pets"
+                    android:textSize="20dp"
+                    android:textAlignment="center"
+                    android:background="@drawable/custom_border"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/category6"/>
+
+                <TextView
+                    android:id="@+id/category8"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Art"
+                    android:textSize="20dp"
+                    android:textAlignment="center"
+                    android:background="@drawable/custom_border"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/category7"/>
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.maymayme.maymayme.chatActivity">
+    <LinearLayout
+        android:layout_weight="2"
+        android:orientation="vertical"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical"
+                >
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:paddingTop="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center"
+                    android:text="CHATS"
+                    android:textSize="30dp" />
+
+                <ImageView
+                    android:id="@+id/plus"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerVertical="true"
+                    android:cropToPadding="true"
+                    android:src="@drawable/next"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="15dp"
+                    android:onClick="nextAct"
+                    ></ImageView>
+            </RelativeLayout>
+        </LinearLayout>
+
+
+        <GridView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/chatGrid"
+            android:numColumns="1"
+            android:columnWidth="100dp"
+            android:stretchMode="columnWidth">
+
+        </GridView>
+    </LinearLayout>
+</RelativeLayout>

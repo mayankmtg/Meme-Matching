@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MayMayMe</string>
+    <string name="title_activity_chat">chatActivity</string>
+    <string name="facebook_app_id">1978032635794008</string>
+    <string name="fb_login_protocol_scheme">fb1978032635794008</string>
+    <string name="ip">http://159.65.159.182:8000</string>
+    <!--<string name="ip">http://192.168.66.39:8000</string>-->
+</resources>
