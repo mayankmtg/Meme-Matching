@@ -109,6 +109,7 @@ public class MemeActivity extends AppCompatActivity {
             {
                 System.out.println("CHAT");
                 Intent activityChangeIntent = new Intent(MemeActivity.this, chatActivity.class);
+                activityChangeIntent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                 MemeActivity.this.startActivity(activityChangeIntent);
             }
 
@@ -119,6 +120,7 @@ public class MemeActivity extends AppCompatActivity {
             {
                 System.out.println("SUGGEST");
                 Intent activityChangeIntent = new Intent(MemeActivity.this, SuggestionsActivity.class);
+                activityChangeIntent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                 MemeActivity.this.startActivity(activityChangeIntent);
             }
 
@@ -129,6 +131,7 @@ public class MemeActivity extends AppCompatActivity {
             {
                 System.out.println("PROFILE");
                 Intent activityChangeIntent = new Intent(MemeActivity.this, ProfileActivity.class);
+                activityChangeIntent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                 MemeActivity.this.startActivity(activityChangeIntent);
             }
 

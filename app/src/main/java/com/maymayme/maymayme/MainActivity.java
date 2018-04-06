@@ -171,7 +171,9 @@ public class MainActivity extends AppCompatActivity {
 
                     queue.add(jsonObjectRequest);
                     Intent activityChangeIntent = new Intent(MainActivity.this, PreferenceActivity.class);
+                    activityChangeIntent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                     MainActivity.this.startActivity(activityChangeIntent);
+                    finish();
                 }
 
                 @Override

@@ -38,12 +38,14 @@ public class SuggestionsActivity extends AppCompatActivity {
     }
     public void nextAct(View v){
         Intent activityChangeIntent = new Intent(SuggestionsActivity.this, MemeActivity.class);
+        activityChangeIntent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
         SuggestionsActivity.this.startActivity(activityChangeIntent);
     }
 
     public void onSugg(View v) {
 
         Intent activityChangeIntent = new Intent(SuggestionsActivity.this, MemeActivity.class);
+        activityChangeIntent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
         SuggestionsActivity.this.startActivity(activityChangeIntent);
 
     }

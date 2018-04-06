@@ -64,7 +64,9 @@ public class ProfileActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent activityChangeIntent = new Intent(ProfileActivity.this, MemeActivity.class);
-                ProfileActivity.this.startActivity(activityChangeIntent);
+                activityChangeIntent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+                startActivity(activityChangeIntent);
+
             }
         });
 
@@ -73,6 +75,7 @@ public class ProfileActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent activityChangeIntent = new Intent(ProfileActivity.this, SettingsActivity.class);
+                activityChangeIntent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                 ProfileActivity.this.startActivity(activityChangeIntent);
             }
         });

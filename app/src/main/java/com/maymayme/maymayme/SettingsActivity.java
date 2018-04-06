@@ -30,6 +30,7 @@ public class SettingsActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent activityChangeIntent = new Intent(SettingsActivity.this, ProfileActivity.class);
+                activityChangeIntent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                 SettingsActivity.this.startActivity(activityChangeIntent);
             }
         });
@@ -47,6 +48,7 @@ public class SettingsActivity extends AppCompatActivity {
             MainActivity.user_id = "0";
 
             Intent activityChangeIntent = new Intent(SettingsActivity.this, MainActivity.class);
+            activityChangeIntent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
             SettingsActivity.this.startActivity(activityChangeIntent);
 
 
@@ -57,6 +59,7 @@ public class SettingsActivity extends AppCompatActivity {
     public void onPref(View v) {
 
             Intent activityChangeIntent = new Intent(SettingsActivity.this, PreferenceActivity.class);
+        activityChangeIntent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
             SettingsActivity.this.startActivity(activityChangeIntent);
 
     }
