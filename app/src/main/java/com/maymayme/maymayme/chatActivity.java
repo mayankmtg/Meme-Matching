@@ -33,5 +33,6 @@ public class chatActivity extends AppCompatActivity {
         Intent activityChangeIntent = new Intent(chatActivity.this, MemeActivity.class);
         activityChangeIntent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
         startActivity(activityChangeIntent);
+        finish();
     }
 }

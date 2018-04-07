@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import com.facebook.AccessToken;
 import com.facebook.login.LoginManager;
 import com.facebook.login.widget.LoginButton;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class SettingsActivity extends AppCompatActivity {
 
@@ -32,6 +33,7 @@ public class SettingsActivity extends AppCompatActivity {
                 Intent activityChangeIntent = new Intent(SettingsActivity.this, ProfileActivity.class);
                 activityChangeIntent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                 SettingsActivity.this.startActivity(activityChangeIntent);
+                finish();
             }
         });
 
@@ -43,6 +45,8 @@ public class SettingsActivity extends AppCompatActivity {
 
             //LoginButton loginButton = (LoginButton)findViewById(R.id.fb_login_bn);
             //loginButton.performClick();
+
+            //FirebaseAuth.getInstance().signOut();
 
             LoginManager.getInstance().logOut();
             MainActivity.user_id = "0";
@@ -59,8 +63,9 @@ public class SettingsActivity extends AppCompatActivity {
     public void onPref(View v) {
 
             Intent activityChangeIntent = new Intent(SettingsActivity.this, PreferenceActivity.class);
-        activityChangeIntent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+            activityChangeIntent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
             SettingsActivity.this.startActivity(activityChangeIntent);
+            finish();
 
     }
 }

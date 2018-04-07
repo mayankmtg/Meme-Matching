@@ -66,6 +66,7 @@ public class ProfileActivity extends AppCompatActivity {
                 Intent activityChangeIntent = new Intent(ProfileActivity.this, MemeActivity.class);
                 activityChangeIntent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                 startActivity(activityChangeIntent);
+                finish();
 
             }
         });

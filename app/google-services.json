@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "4822813499",
+    "firebase_url": "https://maymayme-3677f.firebaseio.com",
+    "project_id": "maymayme-3677f",
+    "storage_bucket": "maymayme-3677f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:4822813499:android:02727c4310729ed7",
+        "android_client_info": {
+          "package_name": "com.maymayme.maymayme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "4822813499-tkaflbodciu8mq697ssbakc55in1uns1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.maymayme.maymayme",
+            "certificate_hash": "22de2c8c2acca0052dd75e29d80d8cef4e85d58c"
+          }
+        },
+        {
+          "client_id": "4822813499-8niu5u418sfjckfdtoffg12adpkrqcpb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCLlIT4CBaAWfY1lIGNUFN3oW5T5kV34E"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "4822813499-8niu5u418sfjckfdtoffg12adpkrqcpb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

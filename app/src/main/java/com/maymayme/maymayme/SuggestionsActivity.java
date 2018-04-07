@@ -40,6 +40,7 @@ public class SuggestionsActivity extends AppCompatActivity {
         Intent activityChangeIntent = new Intent(SuggestionsActivity.this, MemeActivity.class);
         activityChangeIntent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
         SuggestionsActivity.this.startActivity(activityChangeIntent);
+        finish();
     }
 
     public void onSugg(View v) {
