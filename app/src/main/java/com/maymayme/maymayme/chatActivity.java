@@ -10,9 +10,9 @@ import android.widget.Toast;
 
 public class chatActivity extends AppCompatActivity {
     GridView gridView;
-    String names[]={"Mayank", "Aman","Mayank", "Aman","Mayank", "Aman","Mayank", "Aman","Mayank", "Aman","Mayank", "Aman"};
-    String descs[]={"Online", "Offline","Online", "Offline","Online", "Offline","Online", "Offline","Online", "Offline","Online", "Offline"};
-    String status[]={"Online", "Offline","Online", "Offline","Online", "Offline","Online", "Offline","Online", "Offline","Online", "Offline"};
+    String names[]={"Mayank", "Aman"};
+    String descs[]={"Online", "Offline"};
+    String status[]={"Online", "Offline"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,10 +21,13 @@ public class chatActivity extends AppCompatActivity {
 
         GridAdapter gridAdapter=new GridAdapter(chatActivity.this, names, descs,status);
         gridView.setAdapter(gridAdapter);
+        
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Toast.makeText(chatActivity.this, "Clicked Here: "+names[i], Toast.LENGTH_SHORT).show();
+                Intent chatIntent=new Intent(chatActivity.this, chatIndividual.class);
+                chatIntent.putExtra("name",names[i]);
+                startActivity(chatIntent);
             }
         });
 

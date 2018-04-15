@@ -42,8 +42,9 @@
                     android:src="@drawable/next"
                     android:layout_alignParentRight="true"
                     android:paddingRight="15dp"
-                    android:onClick="nextAct"
-                    ></ImageView>
+                    android:onClick="nextAct">
+
+                </ImageView>
             </RelativeLayout>
         </LinearLayout>
 

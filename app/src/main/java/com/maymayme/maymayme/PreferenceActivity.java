@@ -65,7 +65,7 @@ public class PreferenceActivity extends AppCompatActivity {
         });
 
         queue.add(jsonObjectRequest);
-        Intent activityChangeIntent = new Intent(PreferenceActivity.this, chatIndividual.class);
+        Intent activityChangeIntent = new Intent(PreferenceActivity.this, MemeActivity.class);
         activityChangeIntent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
         PreferenceActivity.this.startActivity(activityChangeIntent);
         finish();
