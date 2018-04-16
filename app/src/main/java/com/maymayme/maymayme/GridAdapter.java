@@ -10,45 +10,38 @@ import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
+import java.util.ArrayList;
+
 /**
  * Created by mayank on 27/3/18.
  */
 
 public class GridAdapter extends BaseAdapter{
 
-    private String myNames[];
-    private String desc[];
+    private ArrayList<String> names;
+    private ArrayList<String> uids;
     private Context context;
     private LayoutInflater inflater;
-    private String status[];
+    private ArrayList<String> profile_images;
 
-    public GridAdapter(Context context, String myNames[], String desc[],String status[]){
+    public GridAdapter(Context context, ArrayList<String> names, ArrayList<String> uids,ArrayList<String> profile_images){
         this.context=context;
-        this.myNames=myNames;
-        this.desc=desc;
-        this.status = status;
+        this.names=names;
+        this.profile_images=profile_images;
+        this.uids = uids;
 
 
     }
 
     @Override
     public int getCount() {
-        return myNames.length;
+        return names.size();
     }
 
     @Override
     public Object getItem(int i) {
 
-        return myNames[i];
-    }
-    public boolean getStatus(int i) {
-
-        if(status[i].equals("Online")){
-            return true;
-        }
-        else{
-            return false;
-        }
+        return names.get(i);
     }
 
     @Override
@@ -65,17 +58,8 @@ public class GridAdapter extends BaseAdapter{
 
         }
         TextView t1=(TextView) gridView.findViewById(R.id.name);
-        TextView t2=(TextView) gridView.findViewById(R.id.desc);
-        ImageView im = (ImageView) gridView.findViewById(R.id.on);
-        t1.setText(myNames[i]);
-        t2.setText(desc[i]);
-        if(getStatus(i)){
-            im.setVisibility(View.VISIBLE);
-        }
-        else{
-            im.setVisibility(View.INVISIBLE);
-
-        }
+        ImageView profile_image = (ImageView) gridView.findViewById(R.id.imageView1);
+        t1.setText(names.get(i));
 
         return gridView;
     }

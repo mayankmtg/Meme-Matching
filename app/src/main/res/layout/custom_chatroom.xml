@@ -46,7 +46,9 @@
                         android:layout_alignParentTop="true"
                         android:layout_centerHorizontal="true"
                         android:cropToPadding="true"
-                        android:src="@drawable/profile_pic"></ImageView>
+                        android:src="@drawable/profile_pic">
+
+                    </ImageView>
                 </android.support.v7.widget.CardView>
 
                 <LinearLayout
@@ -65,32 +67,10 @@
                         android:textAlignment="viewStart"
                         android:textSize="20dp" />
 
-                    <TextView
-                        android:id="@+id/desc"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingLeft="20dp"
-                        android:text="Information" />
                 </LinearLayout>
 
             </LinearLayout>
         </LinearLayout>
 
-        <ImageView
-            android:id="@+id/on"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentTop="true"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"
-            android:cropToPadding="true"
-            android:paddingRight="20dp"
-            android:paddingTop="25dp"
-            android:layout_marginTop="20dp"
-            android:src="@drawable/online"
-            >
-
-        </ImageView>
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

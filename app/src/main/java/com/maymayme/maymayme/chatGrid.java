@@ -12,29 +12,31 @@ import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 /**
  * Created by mayank on 8/4/18.
  */
 
 public class chatGrid extends BaseAdapter {
 
-    private Messages messages[];
+    private ArrayList<Messages> messages;
     private Context context;
     private LayoutInflater layoutInflater;
 
-    public chatGrid(Context context, Messages myMessages[]){
+    public chatGrid(Context context, ArrayList<Messages> myMessages){
         this.context=context;
         this.messages=myMessages;
 
     }
     @Override
     public int getCount() {
-        return messages.length;
+        return messages.size();
     }
 
     @Override
     public Object getItem(int i) {
-        return messages[i];
+        return messages.get(i);
     }
 
     @Override
@@ -55,7 +57,7 @@ public class chatGrid extends BaseAdapter {
         View rv=(View) gridView.findViewById(R.id.rightSpace);
 
 
-        if(messages[i].person==1){
+        if(messages.get(i).person==1){
             LayoutParams params = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
             LayoutParams params2 = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
             params.weight=1.0f;
@@ -65,7 +67,7 @@ public class chatGrid extends BaseAdapter {
             rv.setLayoutParams(params);
 
         }
-        mes.setText(messages[i].message);
+        mes.setText(messages.get(i).message);
 
 
         return gridView;
