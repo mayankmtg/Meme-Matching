@@ -56,7 +56,6 @@ public class chatIndividual extends AppCompatActivity {
 
 
         myMessages=new ArrayList<Messages>();
-
         gv=(GridView) findViewById(R.id.myGrid);
         adapter = new chatGrid(chatIndividual.this, this.myMessages);
         gv.setAdapter(adapter);

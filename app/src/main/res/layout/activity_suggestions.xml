@@ -49,13 +49,14 @@
                         android:onClick="nextAct"
                         ></ImageView>
                 </RelativeLayout>
+
                 <TextView
                     android:id="@+id/textView2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:gravity="center"
-                    android:text="You mimght like to connect to"
+                    android:text="You might want to connect to"
                     android:textSize="15dp" />
             </LinearLayout>
 

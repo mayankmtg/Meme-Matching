@@ -11,6 +11,10 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+-ignorewarnings
+-keep class * {
+    public private *;
+}
 
 # Uncomment this to preserve the line number information for
 # debugging stack traces.
